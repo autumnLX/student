@@ -1,2 +1,2 @@
 # student
-kami
+kami/student
