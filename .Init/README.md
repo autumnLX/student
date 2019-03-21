@@ -1,0 +1,1 @@
+把  "init": "node .Init/init.js && git submodule init && git submodule update && git submodule foreach git checkout develop"  放入package.json 里的scripts里

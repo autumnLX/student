@@ -1,0 +1,573 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #666;
+  font-size: 14px;
+  font-family: "Microsoft YaHei", Arial;
+  /* line-height: 18px; */
+}
+
+body {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: #eeeff6;
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+  outline-style: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eeeff6;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table th {
+  font-weight: normal;
+}
+
+.flex-start-center {
+  display: flex !important;
+  align-items: center;
+}
+
+.flex-center-center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/***录音机***/
+#player,
+#recorder {
+  display: none;
+}
+
+/***块***/
+.minW {
+  min-width: 1180px;
+}
+
+.W {
+  width: 1180px;
+}
+
+.minH {
+  min-height: 100vh;
+}
+
+.section {
+  border-radius: 10px;
+  background: #fff;
+  display: block;
+}
+
+/***按钮***/
+.btn {
+  min-width: 100px;
+  height: 34px;
+  line-height: 32px;
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-l {
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+}
+
+.btn-sm {
+  min-width: 80px;
+  height: 30px;
+  line-height: 28px;
+}
+
+.btn-green {
+  background-color: #24cc7c;
+  border-color: #24cc7c;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background-color: #21bd73;
+  border-color: #21bd73;
+  color: #fff;
+}
+
+.btn-outline-green {
+  background-color: #fff;
+  border-color: #21bd73;
+  color: #21bd73;
+}
+
+.btn-white {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #666;
+}
+
+.btn-white:hover {
+  background-color: #fff;
+  border-color: #21bd73;
+  color: #21bd73;
+}
+
+.btn-red {
+  background-color: #ff6666;
+  border-color: #ff6666;
+  color: #fff;
+}
+
+.btn-red:hover {
+  background-color: #ff8888;
+  border-color: #ff8888;
+  color: #fff;
+}
+
+.btn-orange {
+  background-color: #ff9900;
+  border-color: #ff9900;
+  color: #fff;
+}
+
+.btn-gradient {
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(to left, #46bf97, #21bd73);
+  color: #fff;
+}
+
+.btn-disabled {
+  background-color: #eee;
+  border-color: #eee;
+  color: #ccc;
+  cursor: default;
+}
+
+/***表单***/
+input {
+  width: auto;
+  height: 30px;
+  line-height: 28px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  color: #666;
+  background-color: #fff;
+  display: block;
+}
+
+input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+input.active,
+input:focus {
+  border-color: #21bd73;
+}
+
+input.error {
+  border-color: #ff6666;
+}
+
+input.disabled {
+  color: #999;
+  border-color: #ccc;
+  background: #eee;
+}
+
+textarea {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  resize: none;
+  display: block;
+}
+
+textarea.active,
+textarea:focus {
+  border-color: #21bd73;
+}
+
+textarea.error {
+  border-color: #ff6666;
+}
+
+textarea.disabled {
+  color: #999;
+  border-color: #ccc;
+  background: #eee;
+}
+
+/***cover***/
+.cover-b {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-w {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-g {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: rgba(185, 217, 74, .6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*****可覆盖以上样式*****/
+/***常用样式简写***/
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.text-ct {
+  text-align: center;
+}
+
+/***背景 l浅色 d深色 b亮色***/
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-green73 {
+  background-color: #21bd73;
+}
+
+.bg-green {
+  background-color: #24cc7c;
+}
+
+.bg-lgreen {
+  background-color: #f2fbf7;
+}
+
+.bg-bgreen {
+  background-color: #caf6e1;
+}
+
+.bg-red {
+  background-color: #ff8888;
+}
+
+.bg-orange {
+  background-color: #ffc367;
+}
+
+.bg-greye {
+  background-color: #eee;
+}
+
+.bg-grey8 {
+  background-color: #f8f8f8;
+}
+
+/***字号***/
+.f36 {
+  font-size: 36px;
+}
+
+.f30 {
+  font-size: 30px;
+}
+
+.f26 {
+  font-size: 26px;
+}
+
+.f24 {
+  font-size: 24px;
+}
+
+.f20 {
+  font-size: 20px;
+}
+
+.f18 {
+  font-size: 18px;
+}
+
+.f16 {
+  font-size: 16px;
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+.fb {
+  font-weight: bold;
+}
+
+/***字色***/
+.green {
+  color: #21bd73 !important;
+}
+
+.orange {
+  color: #ff9900;
+}
+
+.red {
+  color: #ff6666 !important;
+}
+
+.blue {
+  color: #5dccff;
+}
+
+.grey3 {
+  color: #333;
+}
+
+.grey6 {
+  color: #666;
+}
+
+.grey9 {
+  color: #999;
+}
+
+.greyc {
+  color: #ccc;
+}
+
+.white {
+  color: #fff;
+}
+
+.text-fe8828 {
+  color: #fe8828;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+/***hover字色***/
+.hover-green:hover {
+  color: #21bd73;
+}
+
+/*** 修改滑动组件公共样式 ***/
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 25px;
+}
+
+.swiper-pagination > .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(36, 204, 124, .5);
+  opacity: 1;
+  border: rgba(255, 255, 255, .5) 2px solid;
+}
+
+.swiper-pagination > .swiper-pagination-bullet-active {
+  background: rgba(36, 204, 124, 1);
+  border: rgba(255, 255, 255, 1) 2px solid;
+}
+
+/*** 一些icon ***/
+.icon-common {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('/static/images/icon_common.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.icon-common.arrow-down-grey {
+  background-position-x: -112px;
+}
+
+.icon-common.arrow-down {
+  background-position-x: -128px;
+}
+
+.icon-common.arrow-up {
+  background-position-x: -144px;
+}
+
+.icon-common2 {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/static/images/icon_common2.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.icon-common2.icon-collect {
+  background-position-x: -140px;
+}
+
+.icon-common2.icon-collect:hover,
+.icon-common2.icon-collected {
+  background-position-x: -240px;
+}
+
+.icon-common2.icon-trash {
+  background-position-x: -80px;
+}
+
+.icon-common2.icon-trash:hover {
+  background-position-x: -100px;
+}
+
+.icon-common3 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('/static/images/icon_audiogroups.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.icon-common3.icon-play {
+  background-position: 0 0;
+}
+
+.icon-common3.icon-play:hover {
+  background-position: 0 -30px;
+}
+
+.icon-common3.icon-pause {
+  background-position: -30px 0;
+}
+
+.icon-common3.icon-pause:hover {
+  background-position: -30px -30px;
+}
+
+.icon-common4 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('/static/images/icon_commom3.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.icon-common4.icon-close {
+  background-position-x: -120px;
+}
+
+.icon-common4.icon-close-g {
+  background-position-x: -150px;
+}
+
+/*** tip提示框 ****/
+.tip {
+  background: rgba(36, 204, 124, .8);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  position: absolute;
+}
+
+.tip:after {
+  content: '';
+  position: absolute;
+  border: 10px solid transparent;
+  border-top-color: rgb(36, 204, 124);
+  opacity: 0.8;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+}
+
+/* 录音文案 */
+.audioResultText {
+  line-height: 24px;
+  padding-right: 5px;
+  display: inline-flex;
+  font-size: 18px;
+}
+
+.aiMediaDialogClosed #recorder {
+  visibility: hidden !important;
+}

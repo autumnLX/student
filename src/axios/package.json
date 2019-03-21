@@ -1,0 +1,4 @@
+{
+  "main": "index.js",
+  "typings": "types/index.d.ts"
+}

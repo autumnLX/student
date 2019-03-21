@@ -1,0 +1,8 @@
+/build/
+/config/
+/dist/
+/*.js
+/test/unit/coverage/
+
+src/config/dev_login.json
+config/dev_login.config.js

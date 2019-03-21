@@ -1,0 +1,84 @@
+.noselect {
+
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+
+  -khtml-user-select: none;
+  /* Konqueror */
+
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+
+  user-select: none;
+  /* Non-prefixed version, currently
+  
+  not supported by any browser */
+
+}
+
+.content_error div.form-input,
+.content_error div.input_warp {
+  border-color: #ff6666
+}
+
+.form-item div.form-item {
+  margin-bottom: 0
+}
+
+.radioGroup span.radio {
+  margin-right: 0;
+  padding: 5px 15px;
+}
+
+.radioGroup span.radio.active {
+  color: white;
+  background: #21bd73;
+}
+
+.radioGroup span.radio.active label {
+  color: white;
+}
+
+.radioGroup.border span.radio {
+  border: 1px solid #aaa;
+  border-left: 0;
+}
+
+.radioGroup.border span.radio.active {
+  color: white;
+  background: #21bd73;
+  border-color:  #21bd73;
+}
+
+.radioGroup.border span.radio:first-child {
+  border-left: 1px solid #aaa;
+}
+
+.radioGroup.border span.radio.active:first-child {
+  border-left: 1px solid #21bd73;
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 986912 */
+  src: url('//at.alicdn.com/t/font_986912_vwcoibd27.eot');
+  src: url('//at.alicdn.com/t/font_986912_vwcoibd27.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_986912_vwcoibd27.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_986912_vwcoibd27.woff') format('woff'),
+  url('//at.alicdn.com/t/font_986912_vwcoibd27.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_986912_vwcoibd27.svg#iconfont') format('svg');
+}

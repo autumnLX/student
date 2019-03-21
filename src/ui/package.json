@@ -1,0 +1,10 @@
+{
+  "main": "src/index.js",
+  "typings": "types/index.d.ts",
+  "devDependencies": {
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0"
+  }
+}
